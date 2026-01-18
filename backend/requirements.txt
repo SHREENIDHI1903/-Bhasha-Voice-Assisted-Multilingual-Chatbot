@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+requests
+websockets
+python-dotenv
+numpy
+torch
+transformers
+librosa
+soundfile
+accelerate
+deep-translator
+gTTS
+sentencepiece

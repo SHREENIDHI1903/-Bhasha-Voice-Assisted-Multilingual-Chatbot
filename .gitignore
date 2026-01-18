@@ -1,0 +1,16 @@
+# Ignore everything in the root
+/*
+
+# Unignore specific directories
+!/backend/
+!/frontend/
+
+# Unignore this file
+!/.gitignore
+
+# Standard Ignores (Just in case they are caught inside)
+**/node_modules/
+**/__pycache__/
+**/*.pyc
+**/venv/
+**/.env

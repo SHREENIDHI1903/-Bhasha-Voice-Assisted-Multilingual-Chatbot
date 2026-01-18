@@ -1,0 +1,367 @@
+2026-01-18 08:10:59,324 [INFO] Processing audio with duration 00:00.256
+2026-01-18 08:11:15,217 [INFO] Processing audio with duration 00:00.384
+2026-01-18 08:11:25,300 [INFO] Processing audio with duration 00:06.656
+2026-01-18 08:11:55,208 [INFO] Processing audio with duration 00:01.280
+2026-01-18 08:12:08,778 [INFO] Processing audio with duration 00:14.848
+2026-01-18 08:12:22,875 [INFO] Processing audio with duration 00:19.840
+2026-01-18 08:13:50,938 [INFO] Processing audio with duration 00:01.024
+2026-01-18 08:14:04,172 [INFO] Processing audio with duration 00:13.440
+2026-01-18 08:14:20,162 [INFO] Processing audio with duration 00:22.784
+2026-01-18 08:23:25,340 [INFO] Processing audio with duration 00:00.384
+2026-01-18 08:23:56,851 [INFO] Processing audio with duration 00:10.496
+2026-01-18 08:28:55,209 [INFO] Processing audio with duration 00:00.640
+2026-01-18 08:28:59,155 [INFO] VAD filter removed 00:00.112 of audio
+2026-01-18 08:29:31,373 [INFO] Processing audio with duration 00:07.424
+2026-01-18 08:29:31,429 [INFO] VAD filter removed 00:01.088 of audio
+2026-01-18 09:50:31,819 [INFO] Processing audio with duration 00:00.256
+2026-01-18 09:50:34,849 [INFO] VAD filter removed 00:00.000 of audio
+2026-01-18 09:50:58,681 [INFO] Processing audio with duration 00:09.472
+2026-01-18 09:50:58,748 [INFO] VAD filter removed 00:00.880 of audio
+2026-01-18 09:55:46,930 [INFO] Processing audio with duration 00:01.408
+2026-01-18 09:55:47,326 [INFO] VAD filter removed 00:01.408 of audio
+2026-01-18 09:55:47,440 [INFO] Processing audio with duration 00:01.920
+2026-01-18 09:55:47,567 [INFO] VAD filter removed 00:01.232 of audio
+2026-01-18 09:57:43,059 [INFO] Processing audio with duration 00:10.496
+2026-01-18 09:57:43,150 [INFO] VAD filter removed 00:02.720 of audio
+2026-01-18 10:10:56,738 [INFO] Processing audio with duration 00:00.256
+2026-01-18 10:10:57,060 [INFO] VAD filter removed 00:00.000 of audio
+2026-01-18 10:11:25,998 [INFO] Processing audio with duration 00:07.168
+2026-01-18 10:11:26,045 [INFO] VAD filter removed 00:00.432 of audio
+2026-01-18 10:21:01,902 [INFO] Processing audio with duration 00:00.256
+2026-01-18 10:21:02,334 [INFO] VAD filter removed 00:00.000 of audio
+2026-01-18 10:23:59,714 [INFO] Processing audio with duration 00:06.272
+2026-01-18 10:23:59,755 [INFO] VAD filter removed 00:00.000 of audio
+2026-01-18 10:28:44,888 [INFO] Processing audio with duration 00:00.384
+2026-01-18 10:28:45,421 [INFO] VAD filter removed 00:00.000 of audio
+2026-01-18 10:29:15,404 [INFO] Processing audio with duration 00:03.712
+2026-01-18 10:29:15,426 [INFO] VAD filter removed 00:01.008 of audio
+2026-01-18 10:29:29,833 [INFO] Processing audio with duration 00:00.128
+2026-01-18 10:29:29,845 [INFO] VAD filter removed 00:00.128 of audio
+2026-01-18 10:30:18,675 [INFO] Processing audio with duration 00:00.512
+2026-01-18 10:30:18,683 [INFO] VAD filter removed 00:00.080 of audio
+2026-01-18 10:33:20,781 [INFO] Processing audio with duration 00:05.632
+2026-01-18 10:33:20,812 [INFO] VAD filter removed 00:00.080 of audio
+2026-01-18 11:14:13,271 [INFO] Processing audio with duration 00:01.024
+2026-01-18 11:14:15,908 [INFO] VAD filter removed 00:01.024 of audio
+2026-01-18 11:14:16,344 [INFO] Processing audio with duration 00:01.024
+2026-01-18 11:14:16,358 [INFO] VAD filter removed 00:00.592 of audio
+2026-01-18 11:14:58,960 [INFO] Processing audio with duration 00:06.784
+2026-01-18 11:14:58,993 [INFO] VAD filter removed 00:00.800 of audio
+2026-01-18 11:26:19,356 [INFO] Previewing with Lang: en (User Req: en)
+2026-01-18 11:26:19,421 [INFO] Processing audio with duration 00:00.512
+2026-01-18 11:26:21,497 [INFO] VAD filter removed 00:00.512 of audio
+2026-01-18 11:26:21,802 [INFO] Processing audio with duration 00:00.256
+2026-01-18 11:26:21,804 [INFO] VAD filter removed 00:00.256 of audio
+2026-01-18 11:26:21,809 [INFO] Processing audio with duration 00:04.992
+2026-01-18 11:26:21,830 [INFO] VAD filter removed 00:02.016 of audio
+2026-01-18 11:32:28,022 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 11:32:52,279 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 11:33:23,138 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 11:42:17,447 [INFO] Previewing with Lang: en (User Req: en)
+2026-01-18 11:42:17,485 [INFO] Processing audio with duration 00:00.768
+2026-01-18 11:42:20,207 [INFO] VAD filter removed 00:00.304 of audio
+2026-01-18 11:42:51,486 [INFO] Processing audio with duration 00:03.968
+2026-01-18 11:42:51,511 [INFO] VAD filter removed 00:00.736 of audio
+2026-01-18 11:46:35,033 [INFO] Previewing with Lang: en (User Req: en)
+2026-01-18 11:46:35,033 [INFO] Processing audio with duration 00:00.384
+2026-01-18 11:46:35,036 [INFO] VAD filter removed 00:00.384 of audio
+2026-01-18 11:46:35,689 [INFO] Previewing with Lang: en (User Req: en)
+2026-01-18 11:46:35,693 [INFO] Processing audio with duration 00:01.152
+2026-01-18 11:46:35,703 [INFO] VAD filter removed 00:00.656 of audio
+2026-01-18 11:47:02,073 [INFO] Processing audio with duration 00:03.584
+2026-01-18 11:47:02,092 [INFO] VAD filter removed 00:00.768 of audio
+2026-01-18 11:49:06,037 [INFO] Processing audio with duration 00:01.408
+2026-01-18 11:49:06,054 [INFO] VAD filter removed 00:01.408 of audio
+2026-01-18 11:49:07,186 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 11:49:07,188 [INFO] Processing audio with duration 00:01.152
+2026-01-18 11:49:07,193 [INFO] VAD filter removed 00:00.656 of audio
+2026-01-18 11:49:45,215 [INFO] Processing audio with duration 00:07.168
+2026-01-18 11:49:45,252 [INFO] VAD filter removed 00:01.408 of audio
+2026-01-18 11:50:56,465 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 11:50:56,468 [INFO] Processing audio with duration 00:00.384
+2026-01-18 11:50:56,473 [INFO] VAD filter removed 00:00.384 of audio
+2026-01-18 11:50:57,078 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 11:50:57,078 [INFO] Processing audio with duration 00:01.024
+2026-01-18 11:50:57,084 [INFO] VAD filter removed 00:00.560 of audio
+2026-01-18 11:57:36,818 [INFO] Processing audio with duration 00:07.680
+2026-01-18 11:57:37,524 [INFO] VAD filter removed 00:00.688 of audio
+2026-01-18 12:01:57,866 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 12:32:37,518 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 12:32:37,582 [INFO] Processing audio with duration 00:00.256
+2026-01-18 12:32:40,368 [INFO] VAD filter removed 00:00.000 of audio
+2026-01-18 12:43:42,068 [INFO] Processing audio with duration 00:03.968
+2026-01-18 12:43:42,777 [INFO] VAD filter removed 00:00.144 of audio
+2026-01-18 12:52:10,198 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 12:55:39,732 [INFO] Previewing with Lang: en (User Req: en)
+2026-01-18 12:55:39,771 [INFO] Processing audio with duration 00:01.024
+2026-01-18 12:55:41,952 [INFO] VAD filter removed 00:00.560 of audio
+2026-01-18 12:56:10,782 [INFO] Processing audio with duration 00:00.640
+2026-01-18 12:56:10,787 [INFO] VAD filter removed 00:00.640 of audio
+2026-01-18 12:56:10,816 [INFO] Processing audio with duration 00:05.376
+2026-01-18 12:56:10,842 [INFO] VAD filter removed 00:00.864 of audio
+2026-01-18 12:57:57,036 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 12:57:57,037 [INFO] Processing audio with duration 00:00.896
+2026-01-18 12:57:57,344 [INFO] VAD filter removed 00:00.432 of audio
+2026-01-18 13:10:52,930 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 13:14:00,030 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 13:14:00,035 [INFO] Processing audio with duration 00:00.128
+2026-01-18 13:14:03,121 [INFO] VAD filter removed 00:00.128 of audio
+2026-01-18 13:14:03,471 [INFO] Processing audio with duration 00:05.248
+2026-01-18 13:14:03,492 [INFO] VAD filter removed 00:00.240 of audio
+2026-01-18 13:15:05,199 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 13:15:05,199 [INFO] Processing audio with duration 00:00.256
+2026-01-18 13:15:05,203 [INFO] VAD filter removed 00:00.256 of audio
+2026-01-18 13:15:05,722 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 13:15:05,724 [INFO] Processing audio with duration 00:00.768
+2026-01-18 13:15:05,731 [INFO] VAD filter removed 00:00.144 of audio
+2026-01-18 13:24:20,764 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 13:26:07,763 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 13:26:07,772 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 13:26:07,778 [INFO] Processing audio with duration 00:00.256
+2026-01-18 13:26:10,174 [INFO] VAD filter removed 00:00.256 of audio
+2026-01-18 13:26:10,545 [INFO] Processing audio with duration 00:00.384
+2026-01-18 13:26:10,548 [INFO] VAD filter removed 00:00.384 of audio
+2026-01-18 13:26:10,603 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 13:26:10,604 [INFO] Processing audio with duration 00:07.680
+2026-01-18 13:26:10,644 [INFO] VAD filter removed 00:00.208 of audio
+2026-01-18 13:32:59,041 [INFO] Processing audio with duration 00:09.984
+2026-01-18 13:32:59,921 [INFO] VAD filter removed 00:01.216 of audio
+2026-01-18 16:35:45,572 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 16:45:35,830 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 16:45:35,852 [INFO] Processing audio with duration 00:00.128
+2026-01-18 16:45:39,149 [INFO] VAD filter removed 00:00.128 of audio
+2026-01-18 16:45:39,645 [INFO] Processing audio with duration 00:06.400
+2026-01-18 16:45:39,750 [INFO] VAD filter removed 00:00.832 of audio
+2026-01-18 17:02:18,655 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 17:06:17,554 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 17:06:17,570 [INFO] Processing audio with duration 00:00.128
+2026-01-18 17:06:20,830 [INFO] VAD filter removed 00:00.128 of audio
+2026-01-18 17:06:21,395 [INFO] Processing audio with duration 00:04.736
+2026-01-18 17:06:21,535 [INFO] VAD filter removed 00:00.400 of audio
+2026-01-18 17:30:54,397 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 17:42:29,428 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 17:44:28,897 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 17:48:11,303 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 17:48:23,317 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 17:49:54,498 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 17:49:58,047 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 17:51:07,225 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 17:51:10,421 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 17:51:50,554 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 17:51:53,492 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 17:53:28,919 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 17:53:32,664 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 17:56:02,301 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 17:56:05,501 [INFO] Previewing with Lang: kn (User Req: kn)
+2026-01-18 18:07:39,009 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 18:14:40,816 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:40,824 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:42,550 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:48,595 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:50,088 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:52,018 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:53,435 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:53,956 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:54,471 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:55,616 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:56,253 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:56,778 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:58,068 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:58,702 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:14:59,851 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:01,113 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:02,062 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:04,092 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:04,730 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:05,746 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:08,147 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:12,808 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:13,571 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:22,385 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:23,285 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:25,721 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:26,864 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:34,417 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:38,251 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:15:54,514 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:09,608 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:15,007 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:16,954 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:17,564 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:18,582 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:23,344 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:25,229 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:26,008 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:30,735 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:31,400 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:34,968 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:37,902 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:38,536 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:39,442 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:40,467 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:41,112 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:16:49,692 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:05,924 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:09,442 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:11,582 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:15,028 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:18,728 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:28,593 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:29,755 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:35,700 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:38,735 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:40,886 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:46,920 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:47,457 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:49,354 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:51,502 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:52,058 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:54,321 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:54,927 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:55,697 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:56,214 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:56,728 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:57,233 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:57,744 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:58,253 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:58,804 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:59,339 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:17:59,971 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:00,498 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:01,117 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:01,654 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:02,236 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:03,256 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:03,829 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:04,427 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:04,919 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:05,456 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:06,088 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:06,752 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:07,490 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:08,067 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:08,668 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:09,317 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:10,117 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:10,560 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:11,095 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:11,740 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:12,372 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:13,026 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:13,574 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:14,196 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:18:14,781 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:21:47,039 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 18:23:39,735 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:39,740 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:41,016 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:43,450 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:43,956 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:44,473 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:44,985 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:45,513 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:46,135 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:46,663 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:47,298 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:47,803 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:48,325 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:48,850 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:49,355 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:49,867 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:23:50,373 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:28:48,549 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 18:29:44,787 [INFO] Previewing with Lang: hi (User Req: hi)
+2026-01-18 18:34:15,252 [INFO] Previewing with Lang: te (User Req: te)
+2026-01-18 18:34:15,285 [INFO] Previewing with Lang: te (User Req: te)
+2026-01-18 18:34:26,652 [INFO] Previewing with Lang: te (User Req: te)
+2026-01-18 18:52:57,501 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 18:54:16,742 [INFO] Previewing with Lang: fr (User Req: fr)
+2026-01-18 18:54:16,742 [INFO] Previewing with Lang: fr (User Req: fr)
+2026-01-18 18:56:38,585 [INFO] Previewing with Lang: es (User Req: es)
+2026-01-18 18:56:38,618 [INFO] Previewing with Lang: es (User Req: es)
+2026-01-18 18:56:42,452 [INFO] Previewing with Lang: es (User Req: es)
+2026-01-18 18:56:55,636 [INFO] Previewing with Lang: es (User Req: es)
+2026-01-18 19:06:01,752 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 19:07:43,314 [INFO] Previewing with Lang: or (User Req: or)
+2026-01-18 19:08:40,604 [INFO] Previewing with Lang: pa (User Req: pa)
+2026-01-18 19:41:39,255 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 19:44:41,652 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 19:53:51,923 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 20:17:37,752 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 21:29:28,121 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 21:33:06,759 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 21:37:04,661 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:04,918 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:05,459 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:05,977 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:06,487 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:06,991 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:07,502 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:08,013 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:08,530 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:09,170 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:09,687 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:10,319 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:10,831 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:11,341 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:12,235 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:12,750 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:13,261 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:13,771 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:14,291 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:14,795 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:15,310 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:15,819 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:16,330 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:16,852 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:17,363 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:17,871 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:18,381 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:18,891 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:19,414 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:19,921 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:20,435 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:20,940 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:21,456 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:21,975 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:22,488 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:23,008 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:23,513 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:24,652 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:25,170 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:25,684 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:26,191 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:26,702 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:27,213 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:27,852 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:28,374 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:28,880 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:29,394 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:29,903 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:30,416 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:30,934 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:31,444 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:31,952 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:32,464 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:32,974 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:33,497 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:37:34,004 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:40:48,332 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 21:40:59,643 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 21:42:35,185 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 21:45:28,615 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 21:49:45,845 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:49:45,847 [INFO] Previewing with Lang: ur (User Req: ur)
+2026-01-18 21:57:12,440 [INFO] BACKEND SERVER RESTARTED SUCCESSFULLY (NumPy IMPORTED)
+2026-01-18 21:59:36,321 [INFO] Previewing with Lang: ml (User Req: ml)
+2026-01-18 21:59:36,327 [INFO] Previewing with Lang: ml (User Req: ml)
+2026-01-18 22:03:25,016 [INFO] Previewing with Lang: en (User Req: en)
+2026-01-18 22:03:31,517 [INFO] Previewing with Lang: en (User Req: en)
+2026-01-18 22:09:05,373 [INFO] Previewing with Lang: as (User Req: as)
+2026-01-18 22:09:05,414 [INFO] Previewing with Lang: as (User Req: as)
+2026-01-18 22:09:51,952 [INFO] Previewing with Lang: as (User Req: as)
+2026-01-18 22:09:54,038 [INFO] Previewing with Lang: as (User Req: as)
+2026-01-18 22:15:35,080 [INFO] Previewing with Lang: fr (User Req: fr)
+2026-01-18 22:15:35,105 [INFO] Previewing with Lang: fr (User Req: fr)
+2026-01-18 22:21:08,530 [INFO] Previewing with Lang: ko (User Req: ko)
+2026-01-18 22:21:25,650 [INFO] Previewing with Lang: ko (User Req: ko)

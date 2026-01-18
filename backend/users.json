@@ -1,0 +1,22 @@
+{
+  "admin": {
+    "password": "admin",
+    "role": "admin",
+    "approved": true
+  },
+  "test_1768745684": {
+    "password": "password123",
+    "role": "employee",
+    "approved": true
+  },
+  "test_1768746168": {
+    "password": "password123",
+    "role": "employee",
+    "approved": true
+  },
+  "block_test_1768746752": {
+    "password": "password123",
+    "role": "employee",
+    "approved": true
+  }
+}
