@@ -4,6 +4,8 @@
 # Unignore specific directories
 !/backend/
 !/frontend/
+!/LICENSE
+!/README.md
 
 # Unignore this file
 !/.gitignore
