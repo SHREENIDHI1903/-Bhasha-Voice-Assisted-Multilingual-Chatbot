@@ -1,3 +1,12 @@
+---
+title: Voice Chatbot Backend
+emoji: 🎙️
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # 🎙️ Bhasha: Voice-Assisted Multilingual Chatbot
 
 A powerful, real-time voice-assisted chatbot platform designed to bridge language barriers between customers and support agents. Built with **React**, **FastAPI**, and **Meta's MMS-1B** model, it supports seamless voice-to-voice communication across **20+ languages**.
