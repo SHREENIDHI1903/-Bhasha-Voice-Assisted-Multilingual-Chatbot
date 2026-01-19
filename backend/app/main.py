@@ -42,6 +42,10 @@ app.add_middleware(
     CORSMiddleware, allow_origins=ALLOWED_ORIGINS, allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
 )
 
+@app.get("/")
+async def health_check():
+    return {"status": "ok", "message": "Voice Chatbot Backend is Running!"}
+
 # --- AUTH ROUTER ---
 from app.auth import router as auth_router
 app.include_router(auth_router, prefix="/auth", tags=["Authentication"])
