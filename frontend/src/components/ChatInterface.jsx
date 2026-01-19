@@ -220,14 +220,33 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
         gap: '10px',
         paddingBottom: 'max(10px, env(safe-area-inset-bottom))'
       }}>
-        <input
-          style={{ flex: 1, height: '45px', padding: '0 15px', borderRadius: '25px', border: '1px solid #ddd', outline: 'none', fontSize: '16px' }}
+        <textarea
+          style={{
+            flex: 1,
+            height: '45px',
+            padding: '12px 15px', // Adjusted padding for text alignment
+            borderRadius: '25px',
+            border: '1px solid #ddd',
+            outline: 'none',
+            fontSize: '16px',
+            resize: 'none', // Disable manual resize
+            overflowY: 'auto', // Scroll if too long
+            fontFamily: 'inherit',
+            lineHeight: '1.4'
+          }}
           value={inputText + (previewText ? (inputText ? " " : "") + previewText : "")}
           onChange={(e) => {
             setInputText(e.target.value);
             setPreviewText("");
           }}
-          onKeyPress={handleKeyPress}
+          onKeyDown={(e) => {
+            // Shift+Enter = New Line
+            // Enter = Send
+            if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault();
+              handleSendText();
+            }
+          }}
           placeholder="Type or Speak..."
           disabled={!isConnected}
         />
