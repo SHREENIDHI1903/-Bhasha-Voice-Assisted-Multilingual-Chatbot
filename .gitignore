@@ -8,6 +8,7 @@
 !/README.md
 
 # Unignore this file
+!/Dockerfile
 !/.gitignore
 
 # Standard Ignores (Just in case they are caught inside)

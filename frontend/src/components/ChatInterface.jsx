@@ -220,7 +220,9 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
                 whiteSpace: 'pre-wrap',
                 border: isMe ? 'none' : '1px solid #f3f4f6'
               }}>
-                {content.text}
+                <span style={{ color: isMe ? '#ffffff' : '#1f2937' }}>
+                  {content.text || content.original || content.input || ""}
+                </span>
                 {msg.type === 'preview' && <span style={{ opacity: 0.6 }}>...</span>}
               </div>
 
