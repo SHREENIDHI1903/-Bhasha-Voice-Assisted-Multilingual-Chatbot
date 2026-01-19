@@ -13,6 +13,7 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
   const messagesEndRef = useRef(null);
   const lastProcessedRef = useRef(null); // Prevents duplicate processing
   const [isProcessing, setIsProcessing] = useState(false);
+  const [completionStatus, setCompletionStatus] = useState(false);
 
   // Audio Playback State
   const currentAudioRef = useRef(null);
@@ -56,7 +57,14 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
 
       // 3. PROCESSING STATUS
       if (data.type === 'status') {
-        setIsProcessing(data.status === 'processing');
+        const isNowProcessing = data.status === 'processing';
+        setIsProcessing(isNowProcessing);
+
+        // If we just finished processing, show "Complete" for 3s
+        if (!isNowProcessing) {
+          setCompletionStatus(true);
+          setTimeout(() => setCompletionStatus(false), 3000);
+        }
       }
     } catch (e) { }
   }, [messages]);
@@ -127,7 +135,7 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
           <div>
             <h2 style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>{userId} ({lang})</h2>
             <div style={{ fontSize: '12px', opacity: 0.9 }}>
-              {isProcessing ? '⏳ Transcribing...' : (isConnected ? '🟢 Online' : '🔴 Disconnected')}
+              {isProcessing ? '⏳ Transcribing...' : (completionStatus ? '✅ Transcribe Complete' : (isConnected ? '🟢 Online' : '🔴 Disconnected'))}
             </div>
           </div>
         </div>
