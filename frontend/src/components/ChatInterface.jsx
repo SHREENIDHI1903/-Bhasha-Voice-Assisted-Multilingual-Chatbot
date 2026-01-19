@@ -12,6 +12,7 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
   const [previewText, setPreviewText] = useState("");
   const messagesEndRef = useRef(null);
   const lastProcessedRef = useRef(null); // Prevents duplicate processing
+  const [isProcessing, setIsProcessing] = useState(false);
 
   // Audio Playback State
   const currentAudioRef = useRef(null);
@@ -51,6 +52,11 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
           return (prev.trim() + separator + data.text).trim();
         });
         setPreviewText(""); // Clear ghost text
+      }
+
+      // 3. PROCESSING STATUS
+      if (data.type === 'status') {
+        setIsProcessing(data.status === 'processing');
       }
     } catch (e) { }
   }, [messages]);
@@ -120,7 +126,9 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
           </div>
           <div>
             <h2 style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>{userId} ({lang})</h2>
-            <div style={{ fontSize: '12px', opacity: 0.9 }}>{isConnected ? '🟢 Online' : '🔴 Disconnected'}</div>
+            <div style={{ fontSize: '12px', opacity: 0.9 }}>
+              {isProcessing ? '⏳ Transcribing...' : (isConnected ? '🟢 Online' : '🔴 Disconnected')}
+            </div>
           </div>
         </div>
         <button onClick={onLogout} style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer' }}><PhoneOff size={24} /></button>

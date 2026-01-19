@@ -201,6 +201,7 @@ async def websocket_endpoint(websocket: WebSocket, role: str, user_id: str, lang
                             effective_lang = trans_lang if trans_lang else session_state["lang"]
                             
                             # Offload to background task
+                            await websocket.send_json({"type": "status", "status": "processing"})
                             asyncio.create_task(process_commit(websocket, pcm_audio, effective_lang, transcription_lock))
                             
                             # Clear Buffer (Reset list)
@@ -323,6 +324,7 @@ async def process_commit(websocket, pcm_audio, lang, lock):
             final_text, detected_lang = await run_transcribe_sync(pcm_audio, lang)
             if final_text:
                 await websocket.send_json({"type": "commit", "text": final_text})
+            await websocket.send_json({"type": "status", "status": "idle"})
         except Exception as e:
             print(f"Commit Error: {e}")
 
