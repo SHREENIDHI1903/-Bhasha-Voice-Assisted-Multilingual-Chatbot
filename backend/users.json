@@ -18,5 +18,10 @@
     "password": "password123",
     "role": "employee",
     "approved": true
+  },
+  "shree": {
+    "password": "123",
+    "role": "employee",
+    "approved": true
   }
 }
