@@ -8,13 +8,21 @@ import AdminDashboard from './components/AdminDashboard';
 import AdminLogin from './components/AdminLogin';
 
 function App() {
-  // Session State
-  const [session, setSession] = useState(null);
+  // Session State (Persisted)
+  const [session, setSession] = useState(() => {
+    try {
+      const saved = localStorage.getItem("chat_session");
+      return saved ? JSON.parse(saved) : null;
+    } catch { return null; }
+  });
+
   const [adminSession, setAdminSession] = useState(null);
 
   // Helper to handle login from any flow
   const handleChatStart = (role, userId, lang) => {
-    setSession({ role, userId, lang });
+    const newSession = { role, userId, lang };
+    localStorage.setItem("chat_session", JSON.stringify(newSession));
+    setSession(newSession);
   };
 
   // Protected Chat Route Wrapper
@@ -25,7 +33,10 @@ function App() {
         role={session.role}
         userId={session.userId}
         lang={session.lang}
-        onLogout={() => setSession(null)}
+        onLogout={() => {
+          localStorage.removeItem("chat_session");
+          setSession(null);
+        }}
       />
     );
   };
