@@ -232,7 +232,8 @@ async def websocket_endpoint(websocket: WebSocket, role: str, user_id: str, lang
                             final_text, detected_lang = await run_transcribe_sync(pcm_audio, effective_lang)
                             
                         if final_text:
-                             await websocket.send_json({"type": "preview", "text": final_text})
+                             try: await websocket.send_json({"type": "preview", "text": final_text})
+                             except RuntimeError: pass
 
                 # 2. HANDLE "LANGUAGE CHANGE"
                 elif parsed.get("type") == "language_change":
@@ -311,7 +312,8 @@ async def run_preview(websocket, pcm_audio, lang, lock, session_state=None):
                      print(f"Auto-Detected Logic: Locked to '{detected_info}'")
                      session_state["lang"] = detected_info
                  
-                 await websocket.send_json({"type": "preview", "text": text})
+                 try: await websocket.send_json({"type": "preview", "text": text})
+                 except RuntimeError: pass 
         except Exception as e:
             print(f"Preview Error: {e}")
 
@@ -323,8 +325,12 @@ async def process_commit(websocket, pcm_audio, lang, lock):
         try:
             final_text, detected_lang = await run_transcribe_sync(pcm_audio, lang)
             if final_text:
-                await websocket.send_json({"type": "commit", "text": final_text})
-            await websocket.send_json({"type": "status", "status": "idle"})
+                try: await websocket.send_json({"type": "commit", "text": final_text})
+                except RuntimeError: pass # Socket closed
+            
+            try: await websocket.send_json({"type": "status", "status": "idle"})
+            except RuntimeError: pass
+            
         except Exception as e:
             print(f"Commit Error: {e}")
 
