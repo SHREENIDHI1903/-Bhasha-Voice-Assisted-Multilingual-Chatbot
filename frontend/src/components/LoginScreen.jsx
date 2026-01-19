@@ -53,47 +53,83 @@ const LoginScreen = ({ onJoin, defaultRole, lockedName }) => {
     onJoin(role, userId, lang);
   };
 
-  // --- STYLES ---
-  const styles = {
-    container: { display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', backgroundColor: '#f0f2f5', fontFamily: 'Arial, sans-serif', padding: '20px' },
-    card: { backgroundColor: 'white', padding: '30px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', width: '100%', maxWidth: '350px', display: 'flex', flexDirection: 'column', gap: '20px' },
-    title: { fontSize: '24px', fontWeight: 'bold', textAlign: 'center', marginBottom: '10px' },
-    label: { fontSize: '14px', fontWeight: '600', color: '#4b5563', marginBottom: '8px', display: 'block' },
-    roleContainer: { display: 'flex', gap: '10px' },
-    roleButton: (isSelected, color) => ({ flex: 1, padding: '10px', borderRadius: '8px', border: 'none', cursor: 'pointer', backgroundColor: isSelected ? color : '#e5e7eb', color: isSelected ? 'white' : '#374151', fontWeight: 'bold' }),
-    input: { width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #d1d5db', fontSize: '16px', boxSizing: 'border-box' },
-    joinButton: { width: '100%', padding: '14px', borderRadius: '8px', border: 'none', cursor: 'pointer', backgroundColor: role === 'customer' ? '#2563eb' : '#059669', color: 'white', fontWeight: 'bold', display: 'flex', justifyContent: 'center', gap: '8px' },
-    disabledInput: { width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #e5e7eb', fontSize: '16px', boxSizing: 'border-box', backgroundColor: '#f3f4f6', color: '#6b7280' }
+  const containerStyle = {
+    minHeight: '100vh', width: '100%',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    padding: '20px', fontFamily: "'Inter', sans-serif"
   };
 
   return (
-    <div style={styles.container}>
-      <div style={styles.card}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ backgroundColor: role === 'customer' ? '#dbeafe' : '#d1fae5', padding: '12px', borderRadius: '50%', marginBottom: '15px' }}>
-            <User size={32} color={role === 'customer' ? '#2563eb' : '#059669'} />
+    <div className="bg-pattern" style={containerStyle}>
+      <div className="glass" style={{
+        width: '100%', maxWidth: '400px',
+        padding: '40px',
+        borderRadius: '24px',
+        display: 'flex', flexDirection: 'column', gap: '25px',
+        boxShadow: '0 20px 50px rgba(0,0,0,0.1)'
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{
+            width: '70px', height: '70px', borderRadius: '50%',
+            background: role === 'customer' ? 'linear-gradient(135deg, #dbeafe 0%, #2563eb 100%)' : 'linear-gradient(135deg, #d1fae5 0%, #059669 100%)',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            marginBottom: '15px', color: 'white',
+            boxShadow: role === 'customer' ? '0 4px 15px rgba(37, 99, 235, 0.3)' : '0 4px 15px rgba(5, 150, 105, 0.3)'
+          }}>
+            <User size={32} />
           </div>
-          <h1 style={styles.title}>Voice Chat Portal</h1>
+          <h1 style={{ fontSize: '1.75rem', fontWeight: '800', color: '#1f2937', margin: 0 }}>
+            Voice Link
+          </h1>
+          <p style={{ color: '#6b7280', marginTop: '6px', fontSize: '14px' }}>
+            {role === 'customer' ? 'Customer Support Portal' : 'Employee Access System'}
+          </p>
         </div>
 
-        {/* 1. SELECT ROLE (Hidden if locked) */}
+        {/* 1. ROLE SELECTOR (If allowed) */}
         {!defaultRole && (
-          <div>
-            <label style={styles.label}>Select Role</label>
-            <div style={styles.roleContainer}>
-              <button style={styles.roleButton(role === 'customer', '#2563eb')} onClick={() => setRole('customer')}>Customer</button>
-              <button style={styles.roleButton(role === 'employee', '#059669')} onClick={() => setRole('employee')}>Employee</button>
-            </div>
+          <div style={{ backgroundColor: 'rgba(255,255,255,0.5)', padding: '5px', borderRadius: '12px', display: 'flex', border: '1px solid #e5e7eb' }}>
+            <button
+              onClick={() => setRole('customer')}
+              style={{
+                flex: 1, padding: '10px', borderRadius: '8px', border: 'none', cursor: 'pointer',
+                backgroundColor: role === 'customer' ? 'white' : 'transparent',
+                color: role === 'customer' ? '#2563eb' : '#6b7280',
+                fontWeight: role === 'customer' ? '600' : '500',
+                boxShadow: role === 'customer' ? '0 2px 5px rgba(0,0,0,0.05)' : 'none',
+                transition: 'all 0.2s'
+              }}>Customer</button>
+            <button
+              onClick={() => setRole('employee')}
+              style={{
+                flex: 1, padding: '10px', borderRadius: '8px', border: 'none', cursor: 'pointer',
+                backgroundColor: role === 'employee' ? 'white' : 'transparent',
+                color: role === 'employee' ? '#059669' : '#6b7280',
+                fontWeight: role === 'employee' ? '600' : '500',
+                boxShadow: role === 'employee' ? '0 2px 5px rgba(0,0,0,0.05)' : 'none',
+                transition: 'all 0.2s'
+              }}>Employee</button>
           </div>
         )}
 
-        {/* 2. SELECT LANGUAGE */}
+        {/* 2. LANGUAGE SELECTOR */}
         <div>
-          <label style={styles.label}>My Language</label>
-          <div style={{ display: 'flex', alignItems: 'center', border: '1px solid #d1d5db', borderRadius: '8px', padding: '0 10px', backgroundColor: 'white' }}>
-            <Globe size={20} color="#666" />
+          <label style={{ fontSize: '13px', fontWeight: '600', color: '#374151', marginBottom: '8px', display: 'block', paddingLeft: '4px' }}>
+            Preferred Language
+          </label>
+          <div style={{
+            display: 'flex', alignItems: 'center',
+            border: '1px solid #e5e7eb', borderRadius: '12px',
+            padding: '12px 16px', backgroundColor: 'rgba(255,255,255,0.8)',
+            boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.05)'
+          }}>
+            <Globe size={20} color="#6b7280" style={{ marginRight: '10px' }} />
             <select
-              style={{ ...styles.input, border: 'none', outline: 'none', backgroundColor: 'transparent' }}
+              style={{
+                width: '100%', border: 'none', outline: 'none',
+                backgroundColor: 'transparent', fontSize: '15px', color: '#1f2937',
+                cursor: 'pointer'
+              }}
               value={lang}
               onChange={(e) => setLang(e.target.value)}
             >
@@ -102,20 +138,46 @@ const LoginScreen = ({ onJoin, defaultRole, lockedName }) => {
           </div>
         </div>
 
-        {/* 3. ENTER NAME */}
+        {/* 3. NAME INPUT */}
         <div>
-          <label style={styles.label}>Display Name</label>
+          <label style={{ fontSize: '13px', fontWeight: '600', color: '#374151', marginBottom: '8px', display: 'block', paddingLeft: '4px' }}>
+            Display Name
+          </label>
           <input
             type="text"
-            style={lockedName ? styles.disabledInput : styles.input}
-            placeholder="e.g. John"
+            style={{
+              width: '100%', padding: '14px 16px',
+              borderRadius: '12px', border: '1px solid #e5e7eb',
+              fontSize: '15px', outline: 'none',
+              backgroundColor: lockedName ? '#f3f4f6' : 'rgba(255,255,255,0.8)',
+              color: lockedName ? '#9ca3af' : '#1f2937',
+              cursor: lockedName ? 'not-allowed' : 'text',
+              boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.05)'
+            }}
+            placeholder="Enter your name..."
             value={userId}
             onChange={(e) => !lockedName && setUserId(e.target.value)}
             disabled={!!lockedName}
           />
         </div>
 
-        <button style={styles.joinButton} onClick={handleJoin}>Start Chat <LogIn size={20} /></button>
+        <button
+          onClick={handleJoin}
+          style={{
+            width: '100%', padding: '16px',
+            background: role === 'customer'
+              ? 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)'
+              : 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+            color: 'white', border: 'none',
+            borderRadius: '12px', cursor: 'pointer',
+            fontSize: '16px', fontWeight: '700',
+            display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px',
+            boxShadow: role === 'customer' ? '0 4px 12px rgba(37, 99, 235, 0.3)' : '0 4px 12px rgba(16, 185, 129, 0.3)',
+            transition: 'transform 0.1s',
+            marginTop: '10px'
+          }}>
+          Start Session <LogIn size={20} />
+        </button>
       </div>
     </div>
   );
