@@ -13,3 +13,4 @@ accelerate
 deep-translator
 gTTS
 sentencepiece
+av
