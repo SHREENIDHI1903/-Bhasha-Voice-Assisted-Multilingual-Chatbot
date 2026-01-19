@@ -54,37 +54,95 @@ const EmployeeAuth = ({ onLogin }) => {
     };
 
     return (
-        <div style={styles.container}>
-            <form style={styles.card} onSubmit={handleSubmit}>
-                <h1 style={styles.title}>{isRegister ? 'Employee Registration' : 'Employee Login'}</h1>
+        <div className="bg-pattern" style={{
+            minHeight: '100%', position: 'absolute', top: 0, bottom: 0, left: 0, right: 0,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontFamily: "'Inter', sans-serif", padding: '20px'
+        }}>
+            <form className="glass" style={{
+                width: '100%', maxWidth: '400px',
+                padding: '40px',
+                borderRadius: '24px',
+                display: 'flex', flexDirection: 'column', gap: '20px',
+                boxShadow: '0 20px 50px rgba(0,0,0,0.1)'
+            }} onSubmit={handleSubmit}>
 
-                {error && <div style={styles.error}>{error}</div>}
-                {success && <div style={styles.success}>{success}</div>}
+                <div style={{ textAlign: 'center', marginBottom: '10px' }}>
+                    <div style={{
+                        width: '60px', height: '60px', borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #d1fae5 0%, #10b981 100%)',
+                        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                        color: 'white', marginBottom: '15px',
+                        boxShadow: '0 4px 10px rgba(16, 185, 129, 0.3)'
+                    }}>
+                        {isRegister ? <UserPlus size={28} /> : <LogIn size={28} />}
+                    </div>
+                    <h1 style={{ fontSize: '1.75rem', fontWeight: '700', color: '#1f2937', margin: 0 }}>
+                        {isRegister ? 'Create Account' : 'Employee Login'}
+                    </h1>
+                    <p style={{ color: '#6b7280', marginTop: '8px', fontSize: '14px' }}>
+                        {isRegister ? 'Join the support team' : 'Welcome back, please login'}
+                    </p>
+                </div>
 
-                <input
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={e => setUsername(e.target.value)}
-                    style={styles.input}
-                    required
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                    style={styles.input}
-                    required
-                />
+                {error && <div style={{ padding: '12px', borderRadius: '8px', backgroundColor: '#fef2f2', color: '#dc2626', border: '1px solid #fecaca', fontSize: '14px', textAlign: 'center' }}>{error}</div>}
+                {success && <div style={{ padding: '12px', borderRadius: '8px', backgroundColor: '#ecfdf5', color: '#059669', border: '1px solid #a7f3d0', fontSize: '14px', textAlign: 'center' }}>{success}</div>}
 
-                <button type="submit" style={styles.button}>
-                    {isRegister ? 'Register' : 'Login'}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        value={username}
+                        onChange={e => setUsername(e.target.value)}
+                        style={{
+                            width: '100%', padding: '14px 20px',
+                            backgroundColor: 'rgba(255,255,255,0.8)',
+                            border: '1px solid #e5e7eb',
+                            borderRadius: '12px', outline: 'none',
+                            fontSize: '15px', transition: 'border-color 0.2s',
+                            boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.05)'
+                        }}
+                        required
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                        style={{
+                            width: '100%', padding: '14px 20px',
+                            backgroundColor: 'rgba(255,255,255,0.8)',
+                            border: '1px solid #e5e7eb',
+                            borderRadius: '12px', outline: 'none',
+                            fontSize: '15px', transition: 'border-color 0.2s',
+                            boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.05)'
+                        }}
+                        required
+                    />
+                </div>
+
+                <button type="submit" style={{
+                    width: '100%', padding: '14px',
+                    background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                    color: 'white', border: 'none',
+                    borderRadius: '12px', cursor: 'pointer',
+                    fontSize: '16px', fontWeight: '600',
+                    marginTop: '10px',
+                    boxShadow: '0 4px 12px rgba(5, 150, 105, 0.3)',
+                    transition: 'transform 0.1s'
+                }}>
+                    {isRegister ? 'Submit Registration' : 'Sign In'}
                 </button>
 
-                <span style={styles.link} onClick={() => { setIsRegister(!isRegister); setError(''); }}>
-                    {isRegister ? 'Already have an account? Login' : 'New employee? Register here'}
-                </span>
+                <div style={{ textAlign: 'center', fontSize: '14px', color: '#6b7280' }}>
+                    {isRegister ? 'Already have an account?' : "Don't have an account?"}{' '}
+                    <span
+                        style={{ color: '#059669', fontWeight: '600', cursor: 'pointer', marginLeft: '4px' }}
+                        onClick={() => { setIsRegister(!isRegister); setError(''); }}
+                    >
+                        {isRegister ? 'Login' : 'Register'}
+                    </span>
+                </div>
             </form>
         </div>
     );
