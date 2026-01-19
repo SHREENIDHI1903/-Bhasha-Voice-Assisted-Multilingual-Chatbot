@@ -129,40 +129,54 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
 
   return (
     <div
+      className="bg-pattern"
       style={{
         width: '100%',
-        height: '100%', // Fills #root (which is 100% of body)
-        backgroundColor: '#e5ddd5',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+        height: '100%',
+        fontFamily: "'Inter', sans-serif",
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden', // Prevent outer scroll 
-        position: 'absolute', // Ensures it covers everything without being 'fixed' in a weird way
+        overflow: 'hidden',
+        position: 'absolute',
         top: 0, left: 0, right: 0, bottom: 0
       }}
     >
 
-      {/* HEADER */}
-      <div style={{ height: '60px', backgroundColor: themeColor, color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div style={{ padding: '8px', background: 'rgba(255,255,255,0.2)', borderRadius: '50%' }}>
-            <User size={24} color="white" />
+      {/* HEADER (Glassmorphism) */}
+      <div className="glass" style={{
+        height: '60px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '0 20px',
+        position: 'absolute', top: 0, left: 0, right: 0, zIndex: 50
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{
+            width: '40px', height: '40px',
+            borderRadius: '50%',
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            color: 'white',
+            boxShadow: '0 2px 10px rgba(118, 75, 162, 0.3)'
+          }}>
+            <User size={20} />
           </div>
           <div>
-            <h2 style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>{userId} ({lang})</h2>
-            <div style={{ fontSize: '12px', opacity: 0.9 }}>
-              {isProcessing ? '⏳ Transcribing...' : (completionStatus ? '✅ Transcribe Complete' : (isConnected ? '🟢 Online' : '🔴 Disconnected'))}
+            <h2 style={{ margin: 0, fontSize: '15px', fontWeight: '600', color: '#1f2937' }}>{userId} ({lang})</h2>
+            <div style={{ fontSize: '12px', color: isProcessing ? '#d97706' : '#10b981', fontWeight: '500' }}>
+              {isProcessing ? '⏳ Transcribing...' : (completionStatus ? '✅ Complete' : (isConnected ? '🟢 Online' : '🔴 Disconnected'))}
             </div>
           </div>
         </div>
-        <button onClick={onLogout} style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
+        <button onClick={onLogout} style={{ background: 'transparent', border: 'none', color: '#4b5563', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
           <PhoneOff size={20} />
           <span style={{ fontSize: '10px', fontWeight: 'bold' }}>End Chat</span>
         </button>
       </div>
 
       {/* CHAT AREA */}
-      <div style={{ flex: 1, overflowY: 'auto', padding: '20px', paddingBottom: '90px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div style={{ flex: 1, overflowY: 'auto', padding: '80px 20px 100px 20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         {messages.map((msg, index) => {
           let content = {};
           let isMe = false;
@@ -207,37 +221,36 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* INPUT BAR (Fixed Bottom) */}
-      <div style={{
+      {/* INPUT BAR (Floating) */}
+      <div className="glass" style={{
         position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        zIndex: 9999, // Super Top
-        minHeight: '70px',
-        backgroundColor: '#f0f2f5',
-        borderTop: '1px solid #ccc',
+        bottom: 0, left: 0, right: 0,
+        zIndex: 9999,
+        padding: '15px',
+        paddingBottom: 'max(15px, env(safe-area-inset-bottom))',
         display: 'flex',
-        alignItems: 'center',
-        padding: '10px 15px',
-        gap: '10px',
-        paddingBottom: 'max(10px, env(safe-area-inset-bottom))'
+        alignItems: 'end',
+        gap: '12px',
+        borderTop: 'none',
+        boxShadow: '0 -4px 20px rgba(0,0,0,0.04)'
       }}>
         <textarea
           style={{
             flex: 1,
-            height: '45px',
-            padding: '12px 15px', // Adjusted padding for text alignment
+            height: '50px',
+            padding: '14px 20px',
             borderRadius: '25px',
-            border: '1px solid #ddd',
+            border: '1px solid #e5e7eb',
             outline: 'none',
-            fontSize: '16px',
-            resize: 'none', // Disable manual resize
-            overflowY: 'auto', // Scroll if too long
+            fontSize: '15px',
+            resize: 'none',
+            overflowY: 'auto',
             fontFamily: 'inherit',
             lineHeight: '1.4',
-            whiteSpace: 'pre-wrap', // Force text wrapping
-            wordBreak: 'break-word' // Prevent long words from breaking layout
+            whiteSpace: 'pre-wrap',
+            wordBreak: 'break-word',
+            backgroundColor: 'rgba(255,255,255,0.9)',
+            boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.05)'
           }}
           value={inputText + (previewText ? (inputText ? " " : "") + previewText : "")}
           onChange={(e) => {
@@ -245,40 +258,38 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
             setPreviewText("");
           }}
           onKeyDown={(e) => {
-            // Shift+Enter = New Line
-            // Enter = Send
             if (e.key === 'Enter' && !e.shiftKey) {
               e.preventDefault();
               handleSendText();
             }
           }}
-          placeholder="Type or Speak..."
+          placeholder="Message..."
           disabled={!isConnected}
         />
 
-        {/* MIC BUTTON (Always Visible, Fixed Width) */}
-        <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', paddingBottom: '4px' }}>
           <AudioRecorder
             onAudioData={sendBytes}
             onStop={handleStopRecording}
             disabled={!isConnected}
           />
-        </div>
 
-        {/* SEND BUTTON (Always Visible, Fixed Width) */}
-        <button
-          onClick={handleSendText}
-          disabled={!inputText.trim() && !previewText.trim()}
-          style={{
-            flexShrink: 0,
-            width: '45px', height: '45px', borderRadius: '50%', border: 'none',
-            backgroundColor: (inputText.trim() || previewText.trim()) ? themeColor : '#ccc',
-            color: 'white', cursor: (inputText.trim() || previewText.trim()) ? 'pointer' : 'default',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            transition: 'background-color 0.2s'
-          }}>
-          <Send size={20} />
-        </button>
+          <button
+            onClick={handleSendText}
+            disabled={!inputText.trim() && !previewText.trim()}
+            style={{
+              flexShrink: 0,
+              width: '42px', height: '42px', borderRadius: '50%', border: 'none',
+              backgroundColor: (inputText.trim() || previewText.trim()) ? '#2563eb' : '#d1d5db',
+              color: 'white', cursor: (inputText.trim() || previewText.trim()) ? 'pointer' : 'default',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+              boxShadow: (inputText.trim() || previewText.trim()) ? '0 4px 6px -1px rgba(37, 99, 235, 0.3)' : 'none',
+              transform: (inputText.trim() || previewText.trim()) ? 'scale(1)' : 'scale(0.95)'
+            }}>
+            <Send size={18} />
+          </button>
+        </div>
       </div>
     </div>
   );
