@@ -6,10 +6,10 @@ const LandingPage = () => {
     const navigate = useNavigate();
 
     const styles = {
-        container: { height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f0f2f5', fontFamily: 'Arial, sans-serif' },
-        title: { fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '40px', color: '#1f2937' },
-        cardContainer: { display: 'flex', gap: '30px' },
-        card: { width: '250px', padding: '30px', backgroundColor: 'white', borderRadius: '16px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', cursor: 'pointer', transition: 'transform 0.2s' },
+        container: { minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f0f2f5', fontFamily: 'Arial, sans-serif', padding: '20px', textAlign: 'center' },
+        title: { fontSize: '2rem', fontWeight: 'bold', marginBottom: '40px', color: '#1f2937' }, // Reduced font size slightly
+        cardContainer: { display: 'flex', gap: '30px', flexWrap: 'wrap', justifyContent: 'center', width: '100%', maxWidth: '1000px' },
+        card: { width: '100%', maxWidth: '250px', padding: '30px', backgroundColor: 'white', borderRadius: '16px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', cursor: 'pointer', transition: 'transform 0.2s' },
         cardTitle: { marginTop: '20px', fontSize: '1.25rem', fontWeight: '600' },
         icon: { width: '64px', height: '64px' }
     };

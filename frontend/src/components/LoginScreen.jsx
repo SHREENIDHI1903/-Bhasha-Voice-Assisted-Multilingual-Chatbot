@@ -55,8 +55,8 @@ const LoginScreen = ({ onJoin, defaultRole, lockedName }) => {
 
   // --- STYLES ---
   const styles = {
-    container: { display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', backgroundColor: '#f0f2f5', fontFamily: 'Arial, sans-serif' },
-    card: { backgroundColor: 'white', padding: '40px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', width: '350px', display: 'flex', flexDirection: 'column', gap: '20px' },
+    container: { display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', backgroundColor: '#f0f2f5', fontFamily: 'Arial, sans-serif', padding: '20px' },
+    card: { backgroundColor: 'white', padding: '30px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', width: '100%', maxWidth: '350px', display: 'flex', flexDirection: 'column', gap: '20px' },
     title: { fontSize: '24px', fontWeight: 'bold', textAlign: 'center', marginBottom: '10px' },
     label: { fontSize: '14px', fontWeight: '600', color: '#4b5563', marginBottom: '8px', display: 'block' },
     roleContainer: { display: 'flex', gap: '10px' },
