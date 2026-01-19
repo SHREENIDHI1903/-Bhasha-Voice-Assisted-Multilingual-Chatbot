@@ -28,6 +28,14 @@ function App() {
   // Protected Chat Route Wrapper
   const ProtectedChat = () => {
     if (!session) return <Navigate to="/" />;
+
+    // Auto-Logout after 5 minutes of inactivity
+    useIdleTimeout(300000, () => {
+      alert("Session timed out due to inactivity.");
+      localStorage.removeItem("chat_session");
+      setSession(null);
+    });
+
     return (
       <ChatInterface
         role={session.role}
