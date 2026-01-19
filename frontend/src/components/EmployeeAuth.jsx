@@ -55,7 +55,8 @@ const EmployeeAuth = ({ onLogin }) => {
 
     return (
         <div className="bg-pattern" style={{
-            minHeight: '100%', position: 'absolute', top: 0, bottom: 0, left: 0, right: 0,
+            minHeight: '100vh',
+            width: '100%',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontFamily: "'Inter', sans-serif", padding: '20px'
         }}>

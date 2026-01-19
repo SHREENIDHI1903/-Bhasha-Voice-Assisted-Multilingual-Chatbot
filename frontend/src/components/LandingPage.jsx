@@ -16,14 +16,14 @@ const LandingPage = () => {
 
     return (
         <div className="bg-pattern" style={{
-            minHeight: '100%',
+            minHeight: '100vh',
+            width: '100%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             fontFamily: "'Inter', sans-serif",
-            padding: '20px',
-            position: 'absolute', top: 0, bottom: 0, left: 0, right: 0
+            padding: '40px 20px', // Extra padding for scroll space
         }}>
             <div style={{ marginBottom: '60px', textAlign: 'center' }}>
                 <h1 style={{
