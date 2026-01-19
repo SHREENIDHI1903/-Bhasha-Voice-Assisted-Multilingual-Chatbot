@@ -15,3 +15,4 @@ deep-translator
 gTTS
 sentencepiece
 av
+pydantic
