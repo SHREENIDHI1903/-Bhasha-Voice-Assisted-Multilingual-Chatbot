@@ -43,31 +43,89 @@ const AdminLogin = ({ onLogin }) => {
     };
 
     return (
-        <div style={styles.container}>
-            <form style={styles.card} onSubmit={handleSubmit}>
-                <h1 style={styles.title}><ShieldAlert color="#7c3aed" /> Admin Access</h1>
+    return (
+        <div className="bg-pattern" style={{
+            minHeight: '100%', position: 'absolute', top: 0, bottom: 0, left: 0, right: 0,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontFamily: "'Inter', sans-serif", padding: '20px'
+        }}>
+            <form className="glass" style={{
+                width: '100%', maxWidth: '380px',
+                padding: '40px',
+                borderRadius: '24px',
+                display: 'flex', flexDirection: 'column', gap: '20px',
+                boxShadow: '0 20px 50px rgba(0,0,0,0.1)',
+                borderTop: 'none'
+            }} onSubmit={handleSubmit}>
 
-                {error && <div style={styles.error}>{error}</div>}
+                <div style={{ textAlign: 'center', marginBottom: '10px' }}>
+                    <div style={{
+                        width: '64px', height: '64px', borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%)',
+                        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                        color: 'white', marginBottom: '15px',
+                        boxShadow: '0 4px 15px rgba(124, 58, 237, 0.4)'
+                    }}>
+                        <ShieldAlert size={32} />
+                    </div>
+                    <h1 style={{ fontSize: '1.75rem', fontWeight: '800', color: '#1f2937', margin: 0 }}>
+                        Admin Portal
+                    </h1>
+                    <p style={{ color: '#6b7280', marginTop: '6px', fontSize: '14px' }}>
+                        Type-0 High Security Clearance
+                    </p>
+                </div>
 
-                <input
-                    type="text"
-                    placeholder="Admin Username"
-                    value={username}
-                    onChange={e => setUsername(e.target.value)}
-                    style={styles.input}
-                    required
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                    style={styles.input}
-                    required
-                />
+                {error && <div style={{ padding: '12px', borderRadius: '8px', backgroundColor: '#fef2f2', color: '#dc2626', border: '1px solid #fecaca', fontSize: '14px', textAlign: 'center' }}>{error}</div>}
 
-                <button type="submit" style={styles.button}>
-                    Login to Dashboard
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    <div style={{ position: 'relative' }}>
+                        <input
+                            type="text"
+                            placeholder="Admin ID"
+                            value={username}
+                            onChange={e => setUsername(e.target.value)}
+                            style={{
+                                width: '100%', padding: '14px 20px',
+                                backgroundColor: 'rgba(255,255,255,0.8)',
+                                border: '1px solid #e5e7eb',
+                                borderRadius: '12px', outline: 'none',
+                                fontSize: '15px',
+                                boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.05)'
+                            }}
+                            required
+                        />
+                    </div>
+                    <div style={{ position: 'relative' }}>
+                        <input
+                            type="password"
+                            placeholder="Passcode"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            style={{
+                                width: '100%', padding: '14px 20px',
+                                backgroundColor: 'rgba(255,255,255,0.8)',
+                                border: '1px solid #e5e7eb',
+                                borderRadius: '12px', outline: 'none',
+                                fontSize: '15px',
+                                boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.05)'
+                            }}
+                            required
+                        />
+                    </div>
+                </div>
+
+                <button type="submit" style={{
+                    width: '100%', padding: '14px',
+                    background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+                    color: 'white', border: 'none',
+                    borderRadius: '12px', cursor: 'pointer',
+                    fontSize: '16px', fontWeight: '700',
+                    marginTop: '10px',
+                    boxShadow: '0 4px 12px rgba(124, 58, 237, 0.3)',
+                    letterSpacing: '0.5px'
+                }}>
+                    AUTHENTICATE
                 </button>
             </form>
         </div>
