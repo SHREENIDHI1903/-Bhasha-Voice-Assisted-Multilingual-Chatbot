@@ -21,6 +21,10 @@ COPY backend/ .
 
 # Create a non-root user (Security Best Practice for HF)
 RUN useradd -m -u 1000 user
+
+# Change ownership of the app directory to the new user
+RUN chown -R user:user /app
+
 USER user
 ENV HOME=/home/user \
 	PATH=/home/user/.local/bin:$PATH
