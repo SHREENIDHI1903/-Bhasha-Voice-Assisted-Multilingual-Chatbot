@@ -196,23 +196,53 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
           if (isSystem) return <div key={index} style={{ alignSelf: 'center', backgroundColor: '#fff3cd', color: '#854d0e', padding: '5px 15px', borderRadius: '15px', fontSize: '12px', border: '1px solid #fef9c3' }}>{content.system}</div>;
 
           return (
-            <div key={index} style={{
+            <div key={index} className="msg-animate" style={{
               alignSelf: isMe ? 'flex-end' : 'flex-start',
-              backgroundColor: isMe ? '#dcf8c6' : '#ffffff',
-              padding: '12px 16px', borderRadius: '12px',
-              maxWidth: '75%', boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
-              borderTopRightRadius: isMe ? 0 : '12px', borderTopLeftRadius: !isMe ? 0 : '12px'
+              maxWidth: '85%',
+              position: 'relative'
             }}>
-              {!isMe && <div style={{ fontSize: '11px', fontWeight: 'bold', color: themeColor, marginBottom: '4px' }}>{content.sender}</div>}
-              <div style={{ fontSize: '15px', color: '#111' }}>{content.original}</div>
+              <div style={{
+                backgroundColor: isMe ? '#2563eb' : '#ffffff', // Blue vs White
+                color: isMe ? 'white' : '#1f2937',
+                padding: '12px 18px',
+                borderRadius: isMe ? '20px 20px 4px 20px' : '20px 20px 20px 4px', // Squircle
+                boxShadow: '0 2px 5px rgba(0,0,0,0.05)',
+                fontSize: '15px',
+                lineHeight: '1.5',
+                wordBreak: 'break-word',
+                whiteSpace: 'pre-wrap',
+                border: isMe ? 'none' : '1px solid #f3f4f6'
+              }}>
+                {content.text}
+                {msg.type === 'preview' && <span style={{ opacity: 0.6 }}>...</span>}
+              </div>
+
+              {/* Language Tag */}
+              {content.lang && (
+                <div style={{
+                  fontSize: '10px',
+                  marginTop: '4px',
+                  textAlign: isMe ? 'right' : 'left',
+                  color: '#9ca3af',
+                  padding: '0 4px',
+                  fontWeight: '500'
+                }}>
+                  {content.lang.toUpperCase()}
+                </div>
+              )}
+
+              {/* Translation (if any) */}
               {content.translated && (
-                <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid #eee', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ flex: 1, fontSize: '14px', color: '#004d40', fontStyle: 'italic' }}>{content.translated}</div>
-                  {content.audio64 && (
-                    <button onClick={() => playAudio(content.audio64, index)} style={{ border: 'none', background: '#eee', borderRadius: '50%', padding: '5px', cursor: 'pointer' }}>
-                      {playingIndex === index ? <Square size={16} fill="#004d40" color="#004d40" /> : <Volume2 size={16} color="#004d40" />}
-                    </button>
-                  )}
+                <div style={{
+                  marginTop: '6px',
+                  padding: '8px',
+                  backgroundColor: 'rgba(255,255,255,0.5)',
+                  borderRadius: '8px',
+                  fontSize: '13px',
+                  color: '#047857',
+                  border: '1px solid rgba(0,0,0,0.05)'
+                }}>
+                  {content.translated}
                 </div>
               )}
             </div>
