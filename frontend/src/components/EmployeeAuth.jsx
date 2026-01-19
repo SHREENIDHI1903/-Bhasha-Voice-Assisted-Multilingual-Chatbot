@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Lock, UserPlus, LogIn } from 'lucide-react';
+import { getApiUrl } from '../config';
 
 const EmployeeAuth = ({ onLogin }) => {
     const [isRegister, setIsRegister] = useState(false);
@@ -15,7 +16,7 @@ const EmployeeAuth = ({ onLogin }) => {
         setError('');
         setSuccess('');
 
-        const endpoint = isRegister ? 'http://localhost:8000/auth/register' : 'http://localhost:8000/auth/login';
+        const endpoint = isRegister ? `${getApiUrl()}/auth/register` : `${getApiUrl()}/auth/login`;
 
         try {
             const res = await fetch(endpoint, {

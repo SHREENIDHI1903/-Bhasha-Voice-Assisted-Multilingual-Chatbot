@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ShieldAlert, Lock } from 'lucide-react';
+import { getApiUrl } from '../config';
 
 const AdminLogin = ({ onLogin }) => {
     const [username, setUsername] = useState('');
@@ -11,7 +12,7 @@ const AdminLogin = ({ onLogin }) => {
         setError('');
 
         try {
-            const res = await fetch('http://localhost:8000/auth/login', {
+            const res = await fetch(`${getApiUrl()}/auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })

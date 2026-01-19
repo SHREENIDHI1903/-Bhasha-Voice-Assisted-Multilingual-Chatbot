@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Check, X, Shield, LogOut } from 'lucide-react';
+import { getApiUrl } from '../config';
 
 const AdminDashboard = () => {
     const [users, setUsers] = useState([]);
@@ -8,7 +9,7 @@ const AdminDashboard = () => {
     // Fetch ALL users (modified endpoint to /users)
     const fetchUsers = async () => {
         try {
-            const res = await fetch('http://localhost:8000/auth/users');
+            const res = await fetch(`${getApiUrl()}/auth/users`);
             const data = await res.json();
             setUsers(data);
         } catch (err) {
@@ -22,7 +23,7 @@ const AdminDashboard = () => {
 
     const handleApprove = async (username) => {
         try {
-            await fetch(`http://localhost:8000/auth/approve/${username}`, { method: 'POST' });
+            await fetch(`${getApiUrl()}/auth/approve/${username}`, { method: 'POST' });
             fetchUsers(); // Refresh
         } catch (err) {
             alert("Approve failed");
@@ -32,7 +33,7 @@ const AdminDashboard = () => {
     const handleBlock = async (username) => {
         if (!window.confirm(`Are you sure you want to block ${username}?`)) return;
         try {
-            await fetch(`http://localhost:8000/auth/block/${username}`, { method: 'POST' });
+            await fetch(`${getApiUrl()}/auth/block/${username}`, { method: 'POST' });
             fetchUsers(); // Refresh
         } catch (err) {
             alert("Block failed");
