@@ -123,44 +123,22 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
     if (e.key === 'Enter') handleSendText();
   };
 
-  // --- VISUAL VIEWPORT RESIZE ---
-  // This is the "Gold Standard" for mobile chat apps to handle on-screen keyboards.
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (!containerRef.current) return;
-      if (window.visualViewport) {
-        containerRef.current.style.height = `${window.visualViewport.height}px`;
-        // Optional: Scroll to top of window to prevent body scroll
-        window.scrollTo(0, 0);
-      }
-    };
-
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener('resize', handleResize);
-      handleResize(); // Set initial
-    }
-
-    return () => window.visualViewport?.removeEventListener('resize', handleResize);
-  }, []);
-
+  // --- STANDARD MOBILE LAYOUT ---
+  // Relies on "interactive-widget=resizes-content" in index.html
+  // to resize the viewport when keyboard opens.
 
   return (
     <div
-      ref={containerRef}
       style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        // We use JS height, but fallback to 100%
-        height: '100%',
+        width: '100%',
+        height: '100%', // Fills #root (which is 100% of body)
         backgroundColor: '#e5ddd5',
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden'
+        overflow: 'hidden', // Prevent outer scroll 
+        position: 'absolute', // Ensures it covers everything without being 'fixed' in a weird way
+        top: 0, left: 0, right: 0, bottom: 0
       }}
     >
 
