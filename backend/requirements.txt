@@ -6,6 +6,7 @@ websockets
 python-dotenv
 numpy
 torch
+torchaudio
 transformers
 librosa
 soundfile
