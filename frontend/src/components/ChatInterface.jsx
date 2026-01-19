@@ -173,7 +173,17 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
       </div>
 
       {/* INPUT BAR */}
-      <div style={{ height: '70px', backgroundColor: '#f0f2f5', borderTop: '1px solid #ccc', display: 'flex', alignItems: 'center', padding: '0 15px', gap: '10px' }}>
+      <div style={{
+        flexShrink: 0,
+        minHeight: '70px',
+        backgroundColor: '#f0f2f5',
+        borderTop: '1px solid #ccc',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '10px 15px',
+        gap: '10px',
+        paddingBottom: 'max(10px, env(safe-area-inset-bottom))' // Respect iPhone Home Bar
+      }}>
         <input
           style={{ flex: 1, height: '45px', padding: '0 15px', borderRadius: '25px', border: '1px solid #ddd', outline: 'none', fontSize: '16px' }}
           value={inputText + (previewText ? (inputText ? " " : "") + previewText : "")}
