@@ -155,7 +155,10 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
             </div>
           </div>
         </div>
-        <button onClick={onLogout} style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer' }}><PhoneOff size={24} /></button>
+        <button onClick={onLogout} style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
+          <PhoneOff size={20} />
+          <span style={{ fontSize: '10px', fontWeight: 'bold' }}>End Chat</span>
+        </button>
       </div>
 
       {/* CHAT AREA */}
