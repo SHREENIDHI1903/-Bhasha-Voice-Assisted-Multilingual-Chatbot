@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useIdleTimeout } from './hooks/useIdleTimeout';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LoginScreen from './components/LoginScreen';
 import ChatInterface from './components/ChatInterface';
