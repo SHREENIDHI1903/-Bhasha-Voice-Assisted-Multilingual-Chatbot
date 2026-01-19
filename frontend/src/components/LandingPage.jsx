@@ -14,16 +14,19 @@ const LandingPage = () => {
         icon: { width: '64px', height: '64px' }
     };
 
-    return (
-        <div className="bg-pattern" style={{
-            minHeight: '100vh',
-            width: '100%',
+    <div className="bg-pattern" style={{
+        height: '100%',
+        width: '100%',
+        overflowY: 'auto',
+        fontFamily: "'Inter', sans-serif",
+    }}>
+        <div style={{
+            minHeight: '100%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            fontFamily: "'Inter', sans-serif",
-            padding: '40px 20px', // Extra padding for scroll space
+            padding: '40px 20px',
         }}>
             <div style={{ marginBottom: '60px', textAlign: 'center' }}>
                 <h1 style={{
@@ -114,7 +117,7 @@ const LandingPage = () => {
                 </div>
             </div>
         </div>
-    );
+        );
 };
 
-export default LandingPage;
+        export default LandingPage;
