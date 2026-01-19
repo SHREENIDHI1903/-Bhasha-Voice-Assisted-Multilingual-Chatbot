@@ -16,14 +16,9 @@ class TranscriberService:
             # 1. Use all CPU cores (Safe)
             torch.set_num_threads(os.cpu_count()) 
             
-            # 2. QUANTIZATION (Dynamic)
-            # This speeds up the Linear layers on CPU significantly (1.5x - 2x)
-            # We only quantize Linear layers to avoid breaking the Adapter/Conv layers
-            print("Optimizing model for CPU (Quantization)...")
-            self.model = torch.quantization.quantize_dynamic(
-                self.model, {torch.nn.Linear}, dtype=torch.qint8
-            )
-            print("Model quantized successfully.")
+            # 2. QUANTIZATION (Dynamic) - REMOVED due to Adapter Incompatibility
+            # The 'load_adapter' function fails because quantization changes layer names/types.
+            # We will stick to torch.inference_mode() for speed.
             
             # Map frontend codes (ISO 639-1) to MMS codes (ISO 639-3)
             # Full 22 Official Indian Languages + Major Global
