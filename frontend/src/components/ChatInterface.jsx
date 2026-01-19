@@ -232,7 +232,9 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
             resize: 'none', // Disable manual resize
             overflowY: 'auto', // Scroll if too long
             fontFamily: 'inherit',
-            lineHeight: '1.4'
+            lineHeight: '1.4',
+            whiteSpace: 'pre-wrap', // Force text wrapping
+            wordBreak: 'break-word' // Prevent long words from breaking layout
           }}
           value={inputText + (previewText ? (inputText ? " " : "") + previewText : "")}
           onChange={(e) => {
