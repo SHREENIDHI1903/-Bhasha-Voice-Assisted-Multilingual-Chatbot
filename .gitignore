@@ -16,3 +16,4 @@
 **/*.pyc
 **/venv/
 **/.env
+project_report.md

@@ -190,7 +190,14 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
             if (raw.type === 'audio') return null;
 
             if (raw.system) { isSystem = true; content = raw; }
-            else { content = raw; isMe = content.sender === userId; }
+            else {
+              content = { ...raw };
+              isMe = content.sender === userId;
+
+              // Normalize backend inconsistencies
+              if (!content.text && content.original) content.text = content.original;
+              if (!content.lang && content.src_lang) content.lang = content.src_lang;
+            }
           } catch (e) { isSystem = true; content = { system: typeof msg.text === 'string' ? msg.text : JSON.stringify(msg.text) }; }
 
           if (isSystem) return <div key={index} style={{ alignSelf: 'center', backgroundColor: '#fff3cd', color: '#854d0e', padding: '5px 15px', borderRadius: '15px', fontSize: '12px', border: '1px solid #fef9c3' }}>{content.system}</div>;
