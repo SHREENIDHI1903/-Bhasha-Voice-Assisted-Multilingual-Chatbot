@@ -124,7 +124,7 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
   };
 
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, height: '100dvh', backgroundColor: '#e5ddd5', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, height: '100%', backgroundColor: '#e5ddd5', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
 
       {/* HEADER */}
       <div style={{ height: '60px', backgroundColor: themeColor, color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
@@ -191,6 +191,7 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
       {/* INPUT BAR */}
       <div style={{
         flexShrink: 0,
+        zIndex: 100, // Ensure it stays on top
         minHeight: '70px',
         backgroundColor: '#f0f2f5',
         borderTop: '1px solid #ccc',
