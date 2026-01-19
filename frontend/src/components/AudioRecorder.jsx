@@ -144,6 +144,7 @@ const AudioRecorder = ({ onAudioData, onStop, disabled }) => {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      {/* Hide Device Selector on Mobile (Width < 768px) to save space */}
       <select
         value={selectedDeviceId}
         onChange={(e) => setSelectedDeviceId(e.target.value)}
@@ -155,7 +156,8 @@ const AudioRecorder = ({ onAudioData, onStop, disabled }) => {
           borderRadius: '4px',
           padding: '4px 8px',
           fontSize: '0.875rem',
-          maxWidth: '150px'
+          maxWidth: '100px', // Shrink it
+          display: window.innerWidth < 768 ? 'none' : 'block' // Hide on mobile
         }}
       >
         {devices.map((device) => (

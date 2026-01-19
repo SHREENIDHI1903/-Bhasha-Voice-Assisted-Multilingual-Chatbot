@@ -159,7 +159,7 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
       </div>
 
       {/* CHAT AREA */}
-      <div style={{ flex: 1, overflowY: 'auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div style={{ flex: 1, overflowY: 'auto', padding: '20px', paddingBottom: '90px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
         {messages.map((msg, index) => {
           let content = {};
           let isMe = false;
@@ -204,10 +204,13 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* INPUT BAR */}
+      {/* INPUT BAR (Fixed Bottom) */}
       <div style={{
-        flexShrink: 0,
-        zIndex: 100, // Ensure it stays on top
+        position: 'fixed',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        zIndex: 9999, // Super Top
         minHeight: '70px',
         backgroundColor: '#f0f2f5',
         borderTop: '1px solid #ccc',
@@ -215,24 +218,22 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
         alignItems: 'center',
         padding: '10px 15px',
         gap: '10px',
-        paddingBottom: 'max(10px, env(safe-area-inset-bottom))' // Respect iPhone Home Bar
+        paddingBottom: 'max(10px, env(safe-area-inset-bottom))'
       }}>
         <input
           style={{ flex: 1, height: '45px', padding: '0 15px', borderRadius: '25px', border: '1px solid #ddd', outline: 'none', fontSize: '16px' }}
           value={inputText + (previewText ? (inputText ? " " : "") + previewText : "")}
           onChange={(e) => {
             setInputText(e.target.value);
-            setPreviewText(""); // If user types, clear ghost text to avoid confusion? 
-            // Or better: Treat user edit as committing the ghost text?
-            // Simple approach: User typing overrides preview for now.
+            setPreviewText("");
           }}
           onKeyPress={handleKeyPress}
           placeholder="Type or Speak..."
           disabled={!isConnected}
         />
 
-        {/* MIC BUTTON (Always Visible) */}
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        {/* MIC BUTTON (Always Visible, Fixed Width) */}
+        <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
           <AudioRecorder
             onAudioData={sendBytes}
             onStop={handleStopRecording}
@@ -240,13 +241,14 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
           />
         </div>
 
-        {/* SEND BUTTON (Always Visible) */}
+        {/* SEND BUTTON (Always Visible, Fixed Width) */}
         <button
           onClick={handleSendText}
           disabled={!inputText.trim() && !previewText.trim()}
           style={{
+            flexShrink: 0,
             width: '45px', height: '45px', borderRadius: '50%', border: 'none',
-            backgroundColor: (inputText.trim() || previewText.trim()) ? themeColor : '#ccc', // Gray out if empty
+            backgroundColor: (inputText.trim() || previewText.trim()) ? themeColor : '#ccc',
             color: 'white', cursor: (inputText.trim() || previewText.trim()) ? 'pointer' : 'default',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             transition: 'background-color 0.2s'
