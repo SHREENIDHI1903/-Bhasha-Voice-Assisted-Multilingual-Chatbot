@@ -218,12 +218,23 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
                 lineHeight: '1.5',
                 wordBreak: 'break-word',
                 whiteSpace: 'pre-wrap',
-                border: isMe ? 'none' : '1px solid #f3f4f6'
+                border: isMe ? 'none' : '1px solid #f3f4f6',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '4px'
               }}>
                 <span style={{ color: isMe ? '#ffffff' : '#1f2937' }}>
                   {content.text || content.original || content.input || ""}
                 </span>
                 {msg.type === 'preview' && <span style={{ opacity: 0.6 }}>...</span>}
+                
+                {/* TTS Speaker Icon */}
+                {(content.text || content.original) && (
+                   <div style={{ alignSelf: 'flex-end', cursor: 'pointer', opacity: 0.8, marginTop: '4px' }}
+                        onClick={() => handleTextToSpeech(content.text || content.original, index)}>
+                      {playingIndex === index ? <Square size={16} /> : <Volume2 size={16} />}
+                   </div>
+                )}
               </div>
 
               {/* Language Tag */}
@@ -249,9 +260,15 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
                   borderRadius: '8px',
                   fontSize: '13px',
                   color: '#047857',
-                  border: '1px solid rgba(0,0,0,0.05)'
+                  border: '1px solid rgba(0,0,0,0.05)',
+                  display: 'flex', flexDirection: 'column', gap: '4px'
                 }}>
-                  {content.translated}
+                  <span>{content.translated}</span>
+                   {/* TTS Speaker Icon for Translation */}
+                   <div style={{ alignSelf: 'flex-end', cursor: 'pointer', opacity: 0.8 }}
+                        onClick={() => handleTextToSpeech(content.translated, index + "_trans")}>
+                      {playingIndex === (index + "_trans") ? <Square size={14} /> : <Volume2 size={14} />}
+                   </div>
                 </div>
               )}
             </div>
