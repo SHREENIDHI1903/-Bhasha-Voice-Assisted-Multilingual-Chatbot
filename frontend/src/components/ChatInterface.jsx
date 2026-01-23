@@ -69,6 +69,23 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
     } catch (e) { }
   }, [messages]);
 
+  const handleTextToSpeech = (text, index, lang = 'en') => {
+    if ('speechSynthesis' in window) {
+      if (playingIndex === index) {
+        window.speechSynthesis.cancel();
+        setPlayingIndex(null);
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = lang;
+      utterance.onend = () => setPlayingIndex(null);
+      utterance.onerror = () => setPlayingIndex(null);
+      setPlayingIndex(index);
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
   const playAudio = (b64, index) => {
     // 1. Stop currently playing audio (if any)
     if (currentAudioRef.current) {
@@ -227,13 +244,13 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
                   {content.text || content.original || content.input || ""}
                 </span>
                 {msg.type === 'preview' && <span style={{ opacity: 0.6 }}>...</span>}
-                
+
                 {/* TTS Speaker Icon */}
-                {(content.text || content.original) && (
-                   <div style={{ alignSelf: 'flex-end', cursor: 'pointer', opacity: 0.8, marginTop: '4px' }}
-                        onClick={() => handleTextToSpeech(content.text || content.original, index)}>
-                      {playingIndex === index ? <Square size={16} /> : <Volume2 size={16} />}
-                   </div>
+                {(content.text || content.original || content.input) && (
+                  <div style={{ alignSelf: 'flex-end', cursor: 'pointer', opacity: 0.8, marginTop: '4px' }}
+                    onClick={() => handleTextToSpeech(content.text || content.original || content.input, index, content.lang)}>
+                    {playingIndex === index ? <Square size={16} /> : <Volume2 size={16} />}
+                  </div>
                 )}
               </div>
 
@@ -264,11 +281,11 @@ const ChatInterface = ({ role, userId, lang, onLogout }) => {
                   display: 'flex', flexDirection: 'column', gap: '4px'
                 }}>
                   <span>{content.translated}</span>
-                   {/* TTS Speaker Icon for Translation */}
-                   <div style={{ alignSelf: 'flex-end', cursor: 'pointer', opacity: 0.8 }}
-                        onClick={() => handleTextToSpeech(content.translated, index + "_trans")}>
-                      {playingIndex === (index + "_trans") ? <Square size={14} /> : <Volume2 size={14} />}
-                   </div>
+                  {/* TTS Speaker Icon for Translation */}
+                  <div style={{ alignSelf: 'flex-end', cursor: 'pointer', opacity: 0.8 }}
+                    onClick={() => handleTextToSpeech(content.translated, index + "_trans", content.target_lang || "en")}>
+                    {playingIndex === (index + "_trans") ? <Square size={14} /> : <Volume2 size={14} />}
+                  </div>
                 </div>
               )}
             </div>
