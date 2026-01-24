@@ -1,10 +1,10 @@
 ---
-title: Voice Chatbot Backend
-emoji: 🎙️
-colorFrom: blue
-colorTo: green
-sdk: docker
-pinned: false
+Title: Voice Chatbot Backend
+Emoji: 🎙️
+ColorFrom: blue
+ColorTo: green
+Sdk: docker
+Pinned: false
 ---
 
 # 🎙️ Bhasha: Voice-Assisted Multilingual Chatbot
